@@ -1,4 +1,4 @@
-import Navbar from './../component/navbar';
+import Navbar from '../components/navbar.tsx';
 
 const Contact = () => {
   return (
