@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
-import { Button } from "./components/ui/button";
 import Home from "./pages/home";
 import Project from "./pages/project";
 import Contact from "./pages/contact";
@@ -17,12 +16,8 @@ const App = () => {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
-
-      <div className="flex min-h-svh flex-col items-center justify-center">
-        <Button variant="outline">Button</Button>
-      </div>
     </div>
   );
 };
 
-export default App;
+export default App
