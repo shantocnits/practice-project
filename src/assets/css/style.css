@@ -1,17 +1,21 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import "tailwindcss";
+
+* {
+  font-family: "Montserrat";
+}
 
 @custom-variant dark (&:is(.dark *));
 
 .active-item {
-  color: green;
-  background: rgb(200, 248, 200);
-  padding: 6px 10px;
+  color: #8447E9;
   border-radius: 8px;
 }
 .pending-item {
   color: rgb(0, 0, 0);
   background: transparent;
-  padding: 6px 10px;
   border-radius: 8px;
   transition: 0.4s;
   -webkit-transition: 0.4s;
@@ -20,9 +24,7 @@
   -o-transition: 0.4s;
 }
 .pending-item:hover {
-  color: green;
-  background: rgb(200, 248, 200);
-  padding: 6px 10px;
+  color: #8447E9;
   border-radius: 8px;
 }
 

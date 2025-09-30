@@ -1,165 +1,103 @@
-// // import { NavLink } from "react-router-dom";
-
-// // const Navbar = () => {
-// //   return (
-// //     <div>
-// //       <ul>
-// //         <li><NavLink className={({isActive})=>isActive?"active-item":"pending-item"} to="/home">Home</NavLink></li>
-// //         <li><NavLink className={({isActive})=>isActive?"active-item":"pending-item"} to="/project">Project</NavLink></li>
-// //         <li><NavLink className={({isActive})=>isActive?"active-item":"pending-item"} to="/contact">Contact</NavLink></li>
-// //       </ul>
-// //     </div>
-// //   );
-// // };
-
-// // export default Navbar;
-
-// import { useState } from "react"
-// import { Button } from "@/components/ui/button"
-// import {
-//   NavigationMenu,
-//   NavigationMenuItem,
-//   NavigationMenuList,
-//   NavigationMenuLink,
-// } from "@/components/ui/navigation-menu"
-// import {
-//   Sheet,
-//   SheetContent,
-//   SheetHeader,
-//   SheetTrigger,
-// } from "@/components/ui/sheet"
-// import { Menu } from "lucide-react"
-
-// const Navbar = () => {
-//   const [open, setOpen] = useState(false)
-
-//   const links = [
-//     { name: "Home", href: "/" },
-//     { name: "Project", href: "/project" },
-//     { name: "Contact", href: "/contact" },
-//   ]
-
-//   return (
-//     <header className="w-full border-b bg-white sticky top-0 z-50">
-//       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
-
-//         {/* Logo */}
-//         <h1 className="text-xl font-bold">MyLogo</h1>
-
-//         {/* Desktop Menu */}
-//         <NavigationMenu className="hidden md:flex">
-//           <NavigationMenuList>
-//             {links.map((link) => (
-//               <NavigationMenuItem key={link.name}>
-//                 <NavigationMenuLink
-//                   href={link.href}
-//                   className="px-3 py-2 text-sm font-medium hover:text-primary"
-//                 >
-//                   {link.name}
-//                 </NavigationMenuLink>
-//               </NavigationMenuItem>
-//             ))}
-//           </NavigationMenuList>
-//         </NavigationMenu>
-
-//         {/* Login */}
-//         <Button variant="outline">Login</Button>
-
-//         {/* Mobile Menu (Sheet) */}
-//         <Sheet open={open} onOpenChange={setOpen}>
-//           <SheetTrigger asChild className="md:hidden">
-//             <Button variant="ghost" size="icon">
-//               <Menu className="w-6 h-6" />
-//             </Button>
-//           </SheetTrigger>
-//           <SheetContent side="left" className="w-[240px]">
-//             <SheetHeader>
-//               <h2 className="text-lg font-bold">Menu</h2>
-//             </SheetHeader>
-//             <nav className="mt-4 flex flex-col gap-3">
-//               {links.map((link) => (
-//                 <a
-//                   key={link.name}
-//                   href={link.href}
-//                   className="px-2 py-2 rounded-md hover:bg-gray-100"
-//                   onClick={() => setOpen(false)}
-//                 >
-//                   {link.name}
-//                 </a>
-//               ))}
-//             </nav>
-//           </SheetContent>
-//         </Sheet>
-//       </div>
-//     </header>
-//   )
-// }
-
-// export default Navbar
-
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
+import logo from "../assets/icon/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      {/* Top Navbar */}
+      {/* Navbar */}
       <nav className="w-full bg-white shadow-md sticky top-0 left-0 z-50">
-        <div className=" container mx-auto">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="w-full flex items-center justify-between py-4">
-          {/* Logo */}
-          <div className="text-2xl font-bold text-indigo-600">MyLogo</div>
+            {/* Logo */}
+            <div className="text-2xl font-bold text-indigo-600">
+              <img src={logo} alt="Logo" className="h-8 w-auto" />
+            </div>
 
-          {/* Desktop Menu */}
-          <ul className="hidden md:flex gap-6 text-gray-700 font-medium">
-            <li>
-              <NavLink
-                to="/home"
-                className={({ isActive }) =>
-                  isActive ? "active-item" : "pending-item"
-                }
-              >
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/project"
-                className={({ isActive }) =>
-                  isActive ? "active-item" : "pending-item"
-                }
-              >
-                Project
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/contact"
-                className={({ isActive }) =>
-                  isActive ? "active-item" : "pending-item"
-                }
-              >
-                Contact
-              </NavLink>
-            </li>
-          </ul>
+            {/* Desktop Menu */}
+            <ul className="hidden md:flex gap-6 text-gray-700 font-medium">
+              <li>
+                <NavLink
+                  to="/home"
+                  className={({ isActive }) =>
+                    isActive ? "active-item" : "pending-item"
+                  }
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/about"
+                  className={({ isActive }) =>
+                    isActive ? "active-item" : "pending-item"
+                  }
+                >
+                  About us
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/blog"
+                  className={({ isActive }) =>
+                    isActive ? "active-item" : "pending-item"
+                  }
+                >
+                  Blog
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/service"
+                  className={({ isActive }) =>
+                    isActive ? "active-item" : "pending-item"
+                  }
+                >
+                  Service
+                </NavLink>
+              </li>
+            </ul>
 
-          {/* Desktop Button */}
-          <div className="hidden md:block">
-            <Button>Get Started</Button>
+            {/* Desktop Button */}
+            <div className="hidden md:block">
+              <a
+                href="#"
+                className="inline-flex items-center justify-center 
+                              bg-[#8447E9] hover:bg-purple-700 
+                              text-white font-medium 
+                              px-4 py-2 
+                              shadow-lg transition duration-200 
+                              text-md"
+              >
+                Contact us
+                <span className="ml-2 text-xl">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="10"
+                    viewBox="0 0 10 10"
+                    fill="none"
+                  >
+                    <path
+                      d="M0.833338 4.16666H7.15834L4.40834 1.42499C4.25142 1.26807 4.16326 1.05524 4.16326 0.833325C4.16326 0.611407 4.25142 0.398578 4.40834 0.241658C4.56526 0.0847387 4.77809 -0.00341797 5 -0.00341797C5.22192 -0.00341797 5.43475 0.0847387 5.59167 0.241658L9.75834 4.40833C9.83421 4.48758 9.89368 4.58103 9.93334 4.68333C10.0167 4.88621 10.0167 5.11377 9.93334 5.31666C9.89368 5.41895 9.83421 5.51241 9.75834 5.59166L5.59167 9.75832C5.5142 9.83643 5.42203 9.89843 5.32049 9.94074C5.21894 9.98304 5.11001 10.0048 5 10.0048C4.88999 10.0048 4.78107 9.98304 4.67952 9.94074C4.57797 9.89843 4.48581 9.83643 4.40834 9.75832C4.33023 9.68086 4.26824 9.58869 4.22593 9.48714C4.18362 9.38559 4.16184 9.27667 4.16184 9.16666C4.16184 9.05665 4.18362 8.94773 4.22593 8.84618C4.26824 8.74463 4.33023 8.65246 4.40834 8.57499L7.15834 5.83333H0.833338C0.612324 5.83333 0.400362 5.74553 0.244082 5.58925C0.0878015 5.43297 4.76857e-06 5.22101 4.76857e-06 4.99999C4.76857e-06 4.77898 0.0878015 4.56702 0.244082 4.41074C0.400362 4.25446 0.612324 4.16666 0.833338 4.16666Z"
+                      fill="#F5F5F5"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+
+            {/* Mobile Toggle */}
+            <div className="md:hidden">
+              <button onClick={() => setIsOpen(true)}>
+                <Menu size={28} />
+              </button>
+            </div>
           </div>
-
-          {/* Mobile Toggle */}
-          <div className="md:hidden">
-            <button onClick={() => setIsOpen(true)}>
-              <Menu size={28} />
-            </button>
-          </div>
-        </div>
         </div>
       </nav>
 
@@ -201,7 +139,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to="/project"
+              to="/about"
               onClick={() => setIsOpen(false)}
               className={({ isActive }) =>
                 `${
@@ -209,12 +147,25 @@ const Navbar = () => {
                 } block w-full px-4 py-2`
               }
             >
-              Project
+              About Us
             </NavLink>
           </li>
           <li>
             <NavLink
-              to="/contact"
+              to="/blog"
+              onClick={() => setIsOpen(false)}
+              className={({ isActive }) =>
+                `${
+                  isActive ? "active-item" : "pending-item"
+                } block w-full px-4 py-2`
+              }
+            >
+              Blog
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/service"
               onClick={() => setIsOpen(false)}
               className={({ isActive }) =>
                 `${
