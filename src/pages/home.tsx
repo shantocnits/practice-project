@@ -1,5 +1,4 @@
-import Navbar from "../components/navbar.tsx";
-import Footer from "./../components/footer";
+// import { Helmet } from "react-helmet";
 import Icon1 from "../assets/icon/Icon1.png";
 import Icon2 from "../assets/icon/Icon2.png";
 import Icon3 from "../assets/icon/Icon3.png";
@@ -12,8 +11,12 @@ import profile from "../assets/img/profile.png";
 
 const Home = () => {
   return (
-    <div>
-      <Navbar />
+    <>
+      {/*<Helmet>*/}
+      {/*   <title>Home | Waves Technology</title>*/}
+      {/*   <meta name="description" content="Welcome to Building Technology & Consultant. View our latest notices and explore our services." />*/}
+      {/*   <meta name="keywords" content="building technology, consultant, notices, services" />*/}
+      {/*</Helmet>*/}
 
       {/* Hero Start */}
       <main className=" hero py-[50px] md:py-[100px] bg-[#e5e7eb] ">
@@ -130,7 +133,7 @@ const Home = () => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-3.023 3-6s-1.343-6-3-6m0 12c-1.657 0-3-3.023-3-6s1.343-6 3-6m-9 6h6"
@@ -160,7 +163,7 @@ const Home = () => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M14 10l-2 1m0 0l-2-1m2 1v2.5M14 10l.353-.353M14 10a.5.5 0 00-.5-.5h-3a.5.5 0 00-.5.5L14 10zM6.5 18a.5.5 0 00-.5-.5h-3a.5.5 0 00-.5.5L6.5 18z"
@@ -198,7 +201,7 @@ const Home = () => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M12 6V4m0 2v5m0 0v5m0-5h4m-4 0H8m8 0a4 4 0 11-8 0 4 4 0 018 0z"
@@ -221,7 +224,7 @@ const Home = () => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M12 8c2.167 0 4-2.167 4-4s-1.833-4-4-4-4 2.167-4 4 1.833 4 4 4zM12 10a6 6 0 00-6 6v4h12v-4a6 6 0 00-6-6z"
@@ -244,7 +247,7 @@ const Home = () => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M9 19V6l12 13V6"
@@ -265,7 +268,7 @@ const Home = () => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-3.023 3-6s-1.343-6-3-6m0 12c-1.657 0-3-3.023-3-6s1.343-6 3-6m-9 6h6"
@@ -295,7 +298,7 @@ const Home = () => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M14 10l-2 1m0 0l-2-1m2 1v2.5M14 10l.353-.353M14 10a.5.5 0 00-.5-.5h-3a.5.5 0 00-.5.5L14 10zM6.5 18a.5.5 0 00-.5-.5h-3a.5.5 0 00-.5.5L6.5 18z"
@@ -333,7 +336,7 @@ const Home = () => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M12 6V4m0 2v5m0 0v5m0-5h4m-4 0H8m8 0a4 4 0 11-8 0 4 4 0 018 0z"
@@ -356,7 +359,7 @@ const Home = () => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M12 8c2.167 0 4-2.167 4-4s-1.833-4-4-4-4 2.167-4 4 1.833 4 4 4zM12 10a6 6 0 00-6 6v4h12v-4a6 6 0 00-6-6z"
@@ -379,7 +382,7 @@ const Home = () => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M9 19V6l12 13V6"
@@ -407,7 +410,7 @@ const Home = () => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M12 14l9-5-9-5-9 5 9 5z"
@@ -437,7 +440,7 @@ const Home = () => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M4 12v.01M10 12v.01M16 12v.01M20 12v.01"
@@ -475,7 +478,7 @@ const Home = () => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M12 6V4m0 2v5m0 0v5m0-5h4m-4 0H8m8 0a4 4 0 11-8 0 4 4 0 018 0z"
@@ -498,7 +501,7 @@ const Home = () => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M12 8c2.167 0 4-2.167 4-4s-1.833-4-4-4-4 2.167-4 4 1.833 4 4 4zM12 10a6 6 0 00-6 6v4h12v-4a6 6 0 00-6-6z"
@@ -521,7 +524,7 @@ const Home = () => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M9 19V6l12 13V6"
@@ -542,7 +545,7 @@ const Home = () => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M12 14l9-5-9-5-9 5 9 5z"
@@ -572,7 +575,7 @@ const Home = () => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M4 12v.01M10 12v.01M16 12v.01M20 12v.01"
@@ -610,7 +613,7 @@ const Home = () => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M12 6V4m0 2v5m0 0v5m0-5h4m-4 0H8m8 0a4 4 0 11-8 0 4 4 0 018 0z"
@@ -633,7 +636,7 @@ const Home = () => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M12 8c2.167 0 4-2.167 4-4s-1.833-4-4-4-4 2.167-4 4 1.833 4 4 4zM12 10a6 6 0 00-6 6v4h12v-4a6 6 0 00-6-6z"
@@ -656,7 +659,7 @@ const Home = () => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
                         d="M9 19V6l12 13V6"
@@ -1252,11 +1255,7 @@ const Home = () => {
         </div>
       </div>
       {/* News End */}
-
-      {/* Footer Start */}
-      <Footer />
-      {/* Footer End */}
-    </div>
+    </>
   );
 };
 
