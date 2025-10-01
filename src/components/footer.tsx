@@ -1,4 +1,5 @@
 import footerBg from "../assets/img/footer-bg.png";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -17,8 +18,8 @@ const Footer = () => {
               <h2 className="text-3xl font-normal mb-6 text-white">
                 Ready for your project
               </h2>
-              <a
-                href="#"
+              <NavLink
+                to="/service"
                 className="inline-flex items-center justify-center 
                               bg-[#8447E9] hover:bg-purple-700 
                               text-white font-medium 
@@ -27,10 +28,9 @@ const Footer = () => {
                               text-lg"
               >
                 Get in touch
-              </a>
+              </NavLink>
             </div>
           </div>
-
         </div>
 
         <div className="w-full pt-16">
@@ -40,30 +40,46 @@ const Footer = () => {
             </div>
 
             <nav className="flex space-x-6 md:space-x-10 text-sm font-light mb-8 md:mb-0">
-              <a
-                href="#"
-                className="hover:text-[#8447E9] transition duration-150"
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `${
+                    isActive ? "text-[#8447E9]" : "text-white"
+                  } hover:text-[#8447E9] transition duration-150`
+                }
               >
                 Home
-              </a>
-              <a
-                href="#"
-                className="hover:text-[#8447E9] transition duration-150"
+              </NavLink>
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  `${
+                    isActive ? "text-[#8447E9]" : "text-white"
+                  } hover:text-[#8447E9] transition duration-150`
+                }
               >
                 About us
-              </a>
-              <a
-                href="#"
-                className="hover:text-[#8447E9] transition duration-150"
+              </NavLink>
+              <NavLink
+                to="/blog"
+                className={({ isActive }) =>
+                  `${
+                    isActive ? "text-[#8447E9]" : "text-white"
+                  } hover:text-[#8447E9] transition duration-150`
+                }
               >
                 Blog
-              </a>
-              <a
-                href="#"
-                className="hover:text-[#8447E9] transition duration-150"
+              </NavLink>
+              <NavLink
+                to="/service"
+                className={({ isActive }) =>
+                  `${
+                    isActive ? "text-[#8447E9]" : "text-white"
+                  } hover:text-[#8447E9] transition duration-150`
+                }
               >
                 Services
-              </a>
+              </NavLink>
             </nav>
 
             <div className="flex space-x-4 text-xl">
@@ -95,7 +111,7 @@ const Footer = () => {
           </div>
 
           <div className="border-t border-gray-800 mt-12 text-sm font-light">
-            <div className="flex justify-between items-center py-4 text-gray-400">
+            <div className="flex justify-between items-center py-4 text-white">
               <span>Privacy Policy | Terms of Use</span>
               <span>© 2024 Waves. All rights reserved.</span>
             </div>

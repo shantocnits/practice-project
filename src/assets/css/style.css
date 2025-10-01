@@ -1,5 +1,5 @@
 /* Font */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 @import "tailwindcss";
 
@@ -10,7 +10,7 @@
 @custom-variant dark (&:is(.dark *));
 
 .active-item {
-  color: #8447E9;
+  color: #8447e9;
   border-radius: 8px;
 }
 .pending-item {
@@ -24,9 +24,70 @@
   -o-transition: 0.4s;
 }
 .pending-item:hover {
-  color: #8447E9;
+  color: #8447e9;
   border-radius: 8px;
 }
+
+/* ............... */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+.slider-track {
+  display: flex;
+  width: calc(250px * 14);
+  animation: scroll 30s linear infinite;
+}
+
+.slider:hover .slider-track {
+  animation-play-state: paused;
+}
+
+.logo-item {
+  width: 200px;
+
+}
+
+.logo-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  padding: 0px 10px;
+  border-left: 3px solid #e5e7eb;
+  border-right: 3px solid #e5e7eb;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+}
+/* Reverse */
+@keyframes scroll-reverse {
+  0% {
+    transform: translateX(calc(-250px * 7));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slider-track-reverse {
+  display: flex;
+  width: calc(250px * 14);
+  animation: scroll-reverse 35s linear infinite; /* Slightly different speed */
+}
+
+.slider:hover .slider-track-reverse {
+  animation-play-state: paused;
+}
+/* ............... */
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
