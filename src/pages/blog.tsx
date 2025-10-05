@@ -1,13 +1,6 @@
-import { Helmet } from "react-helmet";
-
 const Blog = () => {
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Blog | Waves Technology</title>
-        <link rel="canonical" href="http://mysite.com/blog" />
-      </Helmet>
       {/* Page Hero Start */}
       <div className="hero pb-[60px]">
         <div className="page-hero py-[50px] bg-[#E1DBF6]">

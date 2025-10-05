@@ -1,13 +1,6 @@
-import { Helmet } from "react-helmet";
-
 const Contact = () => {
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Contact | Waves Technology</title>
-        <link rel="canonical" href="http://mysite.com/service" />
-      </Helmet>
 
       {/* Contact Start */}
       <div className="Contact py-[80px]">

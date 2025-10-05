@@ -7,17 +7,9 @@ import project2 from "../assets/img/project2.png";
 import project3 from "../assets/img/project3.png";
 import project4 from "../assets/img/project4.png";
 import profile from "../assets/img/profile.png";
-import { Helmet } from "react-helmet-async";
-
 const Home = () => {
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Home | Waves Technology</title>
-        <link rel="canonical" href="http://mysite.com/example" />
-      </Helmet>
-
       {/* Hero Start */}
       <main className=" hero py-[50px] md:py-[100px] bg-[#e5e7eb] ">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

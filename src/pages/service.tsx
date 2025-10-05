@@ -1,16 +1,9 @@
-import { Helmet } from "react-helmet-async";
 import Service1 from "../assets/img/service1.png";
 import Service2 from "../assets/img/service2.png";
 
 const Service = () => {
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Services | Waves Technology</title>
-        <link rel="canonical" href="http://mysite.com/service" />
-      </Helmet>
-
       {/* Page Hero Start */}
       <div className="page-hero py-[50px] bg-[#E1DBF6]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

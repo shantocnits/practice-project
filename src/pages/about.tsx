@@ -1,14 +1,6 @@
-import { Helmet } from "react-helmet-async";
-
 const About = () => {
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>About | Waves Technology</title>
-        <link rel="canonical" href="http://mysite.com/about" />
-      </Helmet>
-
       {/* Page Hero Start */}
       <div className="hero pb-[60px]">
         <div className="page-hero py-[50px] bg-[#E1DBF6]">
