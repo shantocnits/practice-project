@@ -49,7 +49,7 @@ const Blog = () => {
             Props & Destructuring
           </h2>
 
-          <div className="card-box grid md:grid-cols-2 md:grid-cols-3 gap-4 items-center">
+          <div className="card-box grid md:grid-cols-3 gap-4 items-center">
             <Card
               titleText="My name Shanto"
               descText="I am web designer"
@@ -77,7 +77,7 @@ const Blog = () => {
             Mapping data to components
           </h2>
 
-          <div className="card-box grid md:grid-cols-2 md:grid-cols-3 gap-4 items-center">
+          <div className="card-box grid md:grid-cols-2 lg:grid-cols-3 gap-4 items-center">
             {/* <CardMap title={Data[0].title} desc={Data[0].desc} /> */}
             {items}
           </div>
