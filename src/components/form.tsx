@@ -1,7 +1,20 @@
-import { useState } from "react";
+import React, { useState } from "react";
+
+interface FormValues {
+  name: string;
+  email: string;
+  number: string;
+  subject: string;
+  contact_method: string;
+  contact_date: string;
+  contact_time: string;
+  theme_color: string;
+  message: string;
+  newsletter: boolean;
+}
 
 const Form = () => {
-  const [values, setValues] = useState({
+  const [values, setValues] = useState<FormValues>({
     name: "",
     email: "",
     number: "",
@@ -11,16 +24,54 @@ const Form = () => {
     contact_time: "",
     theme_color: "",
     message: "",
-    newsletter: "",
+    newsletter: false,
   });
 
-  const handleChanges = (e) => {
-    setValues({ ...values, [e.target.name]: [e.target.value] });
+  const handleChanges = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
+  ) => {
+    const target = e.target;
+    const value =
+      target instanceof HTMLInputElement && target.type === "checkbox"
+        ? target.checked
+        : target.value;
+
+    setValues({
+      ...values,
+      [target.name]: value,
+    });
   };
 
-  const handleSubmit = (e) => {
+  // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+  //   console.log(values);
+  // };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(values);
+
+    // THE MODIFICATION: Show an alert with the submitted data
+    const submittedData = `
+    Form Submitted Successfully! 🎉
+    -----------------------------
+    Name: ${values.name}
+    Email: ${values.email}
+    Number: ${values.number}
+    Subject: ${values.subject}
+    Preferred Contact: ${values.contact_method}
+    Contact Date: ${values.contact_date}
+    Contact Time: ${values.contact_time}
+    Theme Color: ${values.theme_color}
+    Message: ${values.message}
+    Newsletter Subscribed: ${values.newsletter}
+    `;
+    // This shows the browser alert box
+    alert(submittedData);
+
+    // The original console log is still useful for debugging:
+    console.log("Submitted Values:", values);
   };
 
   const ResetFun = () => {
@@ -34,7 +85,7 @@ const Form = () => {
       contact_time: "",
       theme_color: "",
       message: "",
-      newsletter: "",
+      newsletter: false,
     });
   };
 
@@ -120,7 +171,8 @@ const Form = () => {
                 type="radio"
                 name="contact_method"
                 onChange={(e) => handleChanges(e)}
-                value={values.contact_method}
+                value="email"
+                checked={values.contact_method === "email"}
                 required
                 className="form-radio text-purple-600"
               />
@@ -132,7 +184,8 @@ const Form = () => {
                 type="radio"
                 name="contact_method"
                 onChange={(e) => handleChanges(e)}
-                value={values.contact_method}
+                value="phone"
+                checked={values.contact_method === "phone"}
                 required
                 className="form-radio text-purple-600"
               />
@@ -207,8 +260,7 @@ const Form = () => {
             <input
               type="checkbox"
               onChange={(e) => handleChanges(e)}
-              value={values.newsletter}
-              required
+              checked={values.newsletter}
               name="newsletter"
               className="form-checkbox text-purple-600"
             />
